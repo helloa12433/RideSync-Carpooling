@@ -1,0 +1,27 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const nodemailer_1 = __importDefault(require("nodemailer"));
+async function test() {
+    const testAccount = await nodemailer_1.default.createTestAccount();
+    const transporter = nodemailer_1.default.createTransport({
+        host: 'smtp.ethereal.email',
+        port: 587,
+        secure: false,
+        auth: {
+            user: testAccount.user,
+            pass: testAccount.pass,
+        },
+    });
+    const info = await transporter.sendMail({
+        from: testAccount.user,
+        to: 'test@example.com',
+        subject: 'Welcome',
+        html: '<p>Hello</p>'
+    });
+    console.log(info);
+    console.log('Preview URL:', nodemailer_1.default.getTestMessageUrl(info));
+}
+test().catch(console.error);

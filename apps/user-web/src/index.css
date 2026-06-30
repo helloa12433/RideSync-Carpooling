@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@source "../../../packages/shared-ui/src";
+
+@layer base {
+  :root {
+    --bg-app: #ffffff;
+    --bg-surface: #ffffff;
+    --bg-surface-hover: #f9fafb;
+    --border-app: #e5e7eb;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    
+    /* RideSync brand colors */
+    --color-primary: #10b981;
+    --color-primary-dark: #059669;
+    --color-secondary: #2563eb; /* Stronger blue for theme */
+  }
+
+  .dark {
+    --bg-app: #0B0F19;
+    --bg-surface: #111827;
+    --bg-surface-hover: #1f2937;
+    --border-app: #1f2937;
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+  }
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-secondary: var(--color-secondary);
+  
+  --color-app-bg: var(--bg-app);
+  --color-app-surface: var(--bg-surface);
+  --color-app-surface-hover: var(--bg-surface-hover);
+  --color-app-border: var(--border-app);
+  --color-app-text: var(--text-main);
+  --color-app-text-muted: var(--text-muted);
+
+  /* aliases for shared-ui components */
+  --color-surface: var(--bg-surface);
+  --color-surface-elevated: var(--bg-surface-hover);
+  --color-border: var(--border-app);
+  --color-text: var(--text-main);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global transition for smooth theme switching */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 400ms;
+}
+
+/* Disable transition on elements that shouldn't transition globally, or elements where performance is an issue, but standard DOM is fine */

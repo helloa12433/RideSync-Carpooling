@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const autoshift_controller_1 = require("../controllers/autoshift.controller");
+const auth_middleware_1 = require("../middlewares/auth.middleware");
+const validate_middleware_1 = require("../middlewares/validate.middleware");
+const autoshift_schema_1 = require("../validators/autoshift.schema");
+const router = (0, express_1.Router)();
+router.use(auth_middleware_1.authMiddleware);
+router.post('/trigger', (0, validate_middleware_1.validateRequest)(autoshift_schema_1.triggerAutoshiftSchema), autoshift_controller_1.autoshiftController.triggerAutoshift.bind(autoshift_controller_1.autoshiftController));
+router.get('/ride/:rideId/history', autoshift_controller_1.autoshiftController.getAutoshiftHistory.bind(autoshift_controller_1.autoshiftController));
+router.get('/:id', autoshift_controller_1.autoshiftController.getAutoshiftById.bind(autoshift_controller_1.autoshiftController));
+exports.default = router;
