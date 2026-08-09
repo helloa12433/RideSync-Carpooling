@@ -1,6 +1,8 @@
 # RideSync
 
-### Distributed • Scheduled • Transparent Carpooling Platform
+Firstly i just want to tell it is distributed system which made of 13 microservices so i dont have the idea how to deploy all the 13 backend microservices and how they communicate in servers after deploying  on server because its not a monolith its 13 microservices you can run fully the proper functionning on your own system and it will run perfectly fine and have deployed only frontend user-service whereyou can see the the project but its not connnected to backend becuase it has 13 microservices i dont know how to deploy 13 and and with proper communication with docker container so button are not clickable because it connnect to docker container and 13 microservices so if you want to see you can run in your system all 13 microservices with simple command "npm run dev" it will work perfectly fine and i m still learning how to deploy multiple microservices with proper communication with each other and with docker container Thankyou for this.
+
+### Distributed • Scheduled • Transparent Carpooling Platform (High Throughput and Low Latency)
 
 RideSync is a modern, distributed carpooling platform designed to connect people traveling the same route. It allows verified drivers to publish scheduled rides, and passengers to reserve seats transparently. 
 
@@ -17,6 +19,7 @@ Instead of four different cars traveling on the same route, one driver can take 
 If the trip costs around ₹100 in total, sharing the ride significantly reduces the cost per passenger. It also means fewer vehicles on the road, lower fuel consumption, and lower CO₂ emissions. 
 
 RideSync is built around this simple idea:
+for better understanding watch this demo of why carpooling and what carpooling solves and what my carpooling solves : https://6a4413b53b15586c8a690d07--userwebcarpool.netlify.app/
 
 **Share the ride → Share the cost → Reduce traffic → Reduce emissions.**
 
@@ -350,6 +353,6 @@ Ensure that your `.env` files are properly configured for each service based on 
 
 *I wasn't trying to build a demo that simply works on my laptop.* 
 
-I wanted to deeply understand what happens when a system is under actual load, when microservices fail unexpectedly, when multiple users perform the exact same operation at the same millisecond, and when the platform absolutely needs to remain available. 
+I wanted to deeply understand what happens when a system is under actual load, when microservices fail unexpectedly, when multiple users perform the exact same operation at the same millisecond, and when the platform absolutely needs to remain available i mean simply production grade Distributed System.
 
-RideSync is the result of that curiosity—a platform built to handle the chaos of distributed systems while providing a clean, transparent, and seamless experience for the end user.
+RideSync is the result of that curiosity a platform built to handle the chaos of distributed systems while providing a clean, transparent, and seamless experience for the end user.
