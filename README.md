@@ -1,6 +1,10 @@
+/*** Firstly i just want to tell it is distributed system which made of 13 microservices so i dont have the idea how to deploy all the 13 backend microservices and how they communicate in servers after deploying  on server because its not a monolith its 13 microservices you can run fully the proper functionning on your own system and it will run perfectly fine and have deployed only frontend user-service whereyou can see the the project but its not connnected to backend becuase it has 13 microservices i dont know how to deploy 13 and and with proper communication with docker container so button are not clickable because it connnect to docker container and 13 microservices so if you want to see you can run in your system all 13 microservices with simple command "npm run dev" it will work perfectly fine and i m still learning how to deploy multiple microservices with proper communication with each other and with docker container if someone know this deployment please tell me i want to deploy that Thankyou for this reading and help. ***/
+
+
+
+
 # RideSync
 
-Firstly i just want to tell it is distributed system which made of 13 microservices so i dont have the idea how to deploy all the 13 backend microservices and how they communicate in servers after deploying  on server because its not a monolith its 13 microservices you can run fully the proper functionning on your own system and it will run perfectly fine and have deployed only frontend user-service whereyou can see the the project but its not connnected to backend becuase it has 13 microservices i dont know how to deploy 13 and and with proper communication with docker container so button are not clickable because it connnect to docker container and 13 microservices so if you want to see you can run in your system all 13 microservices with simple command "npm run dev" it will work perfectly fine and i m still learning how to deploy multiple microservices with proper communication with each other and with docker container if someone know this deployment please tell me i want to deploy that Thankyou for this reading and help.
 
 ### Distributed Scheduled Transparent Carpooling Platform (High Throughput and Low Latency)
 
