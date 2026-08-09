@@ -273,7 +273,7 @@ Historical records are never physically deleted. A ride transitions properly thr
 ---
 
 ## Project Highlights
-
+- High Throughput and Low Latency (By using Message Queues like Kafka and RabbitMQ)
 - Distributed microservices architecture
 - Event-driven communication with Apache Kafka
 - Background task processing with RabbitMQ
